@@ -1,0 +1,115 @@
+<!-- Created By CodingNepal - www.codingnepalweb.com  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to GK</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAweome CDN Link for Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+    <script src="cordova.js"></script>
+</head>
+<body>
+<!-- start Quiz button -->
+
+<div  class="upprimg" id="upprimg" style="display:none">
+    <img src="logo.png">
+</div>
+
+<div id="divtxt">   <h3 id="h2txt"> Welcome to GK</h3></div>
+
+<div class="start_btn" id="start_btndiv">
+
+    <button id="btstart">Start</button></div>
+
+<!-- Info Box -->
+<div class="info_box">
+
+
+    <div class="start_btn"> <p id="countertxt">12</p></div>
+
+
+
+
+    <div class="info-list">
+
+    </div>
+    <div class="buttons">
+        <button class="quit">Exit Quiz</button>
+        <button class="restart" id="restart">Continue</button>
+    </div>
+</div>
+
+<!-- Quiz Box -->
+
+
+
+
+<div class="quiz_box">
+
+    <header>
+
+        <div class="title"></div>
+
+        <div class="timer">
+
+            <div class="timer_sec time_line" id="timer_sec"></div>
+
+
+        </div>
+
+    </header>
+    <section>
+        <div class="que_text">
+            <!-- Here I've inserted question from JavaScript -->
+        </div>
+        <div class="option_list">
+            <!-- Here I've inserted options from JavaScript -->
+        </div>
+    </section>
+	
+	
+
+    <!-- footer of Quiz Box -->
+    <footer>
+       <div class="lblcorrect"> <p id="textcorrect">  </p><p id="textwrong">  </p>   </div> <div class="total_que">
+            <!-- Here I've inserted Question Count Number from JavaScript -->
+        </div>
+        <button class="next_btn" id="next_btn">Next Que</button>
+    </footer>
+</div>
+
+<!-- Result Box -->
+<div class="result_box">
+
+    <div class="complete_text">Test Score</div>
+    <div class="complete_text">
+
+        <img src="" id="imgrest">
+    </div>
+
+    <div class="score_text">
+        <!-- Here I've inserted Score Result from JavaScript -->
+    </div>
+    <div class="buttons">
+        <button class="restart">Play Again</button>
+        <button class="quit">Complete</button>
+    </div>
+</div>
+
+<!-- Inside this JavaScript file I've inserted Questions and Options only -->
+<script src="js/questions.js"></script>
+
+<!-- Inside this JavaScript file I've coded all Quiz Codes -->
+<script src="js/script.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

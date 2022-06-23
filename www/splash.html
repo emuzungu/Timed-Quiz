@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+img {
+ max-width: 100%;
+  height: auto;
+}
+body {
+    background-color: #55877b;
+}
+
+*{margin:0;padding:0;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+}
+
+.wrapper-new {
+    padding: 15px;
+    text-align: center;
+}
+
+.wrapper-new h2 {
+    margin-bottom: 20px;
+	font-size: 25px;
+	color: white;
+}
+
+.wrapper-new p {
+    margin: 10px 0;
+
+	font-size: 19px;
+	color: white;
+}
+.cn-igr img {
+    vertical-align: top;
+    margin-top: -42px;
+}
+</style>
+
+
+
+</head>
+<body>
+
+<div class="wrapper-new">
+    <h2>Welcome to timed quiz </h2>
+
+
+    <div class="top-stnd-im">
+        <img src="man.png">
+    </div>
+
+    <p class="jokhead"> Lets warm up with a joke </p>
+
+    <p style="margin-top: 30px;"> what did one plate say to another?  </p>
+
+    <p> Dinner is on me  </p>
+
+    <div class="cn-igr">
+        <img src="funny.png">
+    </div>
+
+    <div class="vi-icons">
+        <img src="go.png">
+    </div>
+</div>
+<script src="js/jquery-3.6.0.js"></script>
+<script>
+
+    $(".vi-icons").click(function()
+    {
+    window.location="question.html";
+    });
+
+</script>
+</body>
+</html>
+
+

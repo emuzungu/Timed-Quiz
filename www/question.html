@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+      <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+
+	  <script src="cordova.js"></script>
+
+
+      <script src="js/questions.js"></script>
+      <script src="js/jquery-3.6.0.js"></script>
+	  <script type="text/javascript">
+
+
+
+	   function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+ function onDeviceReady() {
+        SpinnerDialog.show();
+        showdata();
+  }
+
+         function  showdata()
+         {
+          $.ajax('https://timequiz.live/quiz.asmx/Allquestions', {
+				type: 'POST',
+                 contentType: "application/json; charset=utf-8",
+                 dataType: "json",
+				 success: function (data, status, xhr) {
+				   $.each(data.d, function (key, value) {
+
+                     item = {}
+                     item ["numb"] = value.numb;
+                     item ["question"] = value.question;
+                     item ["answer"] = value.answer;
+
+                     item ["option1"] = value.option1;
+                     item ["option2"] = value.option2;
+                     item ["option3"] = value.option3;
+                     item ["option4"] = value.option4;
+                     questions1.push(item);
+				 });
+                  localStorage.setItem('quiz', JSON.stringify(questions1));
+				 console.log(questions1);
+SpinnerDialog.hide();
+				 window.location="index.html";
+				},
+				error: function (jqXhr, textStatus, errorMessage) {
+				alert(jqXhr.responseText);
+				SpinnerDialog.hide();
+				console.log(jqXhr.responseText);
+				}
+
+		});
+
+
+
+
+         }
+
+    </script>
+
+  </head>
+  <body onload="onLoad()">
+   
+
+  </body>
+</html>
